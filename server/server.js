@@ -67,14 +67,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', (req, res) => {
-  console.log('Inside the homepage callback function');
-  console.log(req.sessionID);
+  console.log('\n\n*****\nInside the homepage callback function');
+  console.log(`req.sessionID: ${req.sessionID}\n*****\n\n`);
   res.send(`\nHome page.\n`);
 })
 
 app.get('/login', (req, res) =>{
-  console.log('Inside GET /login callback function');
-  console.log(req.sessionID);
+  console.log('\n\n*****\nInside the GET /login callback function');
+  console.log(`req.sessionID: ${req.sessionID}\n*****\n\n`);
   res.send('You got the login page!\n')
 })
 
@@ -94,10 +94,10 @@ app.post('/login', (req, res, next) => {
 });
 
 app.get('/authrequired', (req, res) => {
-  console.log('Inside GET /authrequired callback');
-  console.log(`User authenticated? ${req.isAuthenticated()}`)
+  console.log('\n\n*****\nInside GET /authrequired callback');
+  console.log(`User authenticated? ${req.isAuthenticated()}\n*****\n\n`)
   if (req.isAuthenticated()) {
-    res.send('you hit the authentication endpoint\n');
+    res.send('\nyou hit the authentication endpoint\n');
   } else {
     res.redirect('/');
   }
