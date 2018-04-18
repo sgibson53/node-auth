@@ -9,7 +9,7 @@ This application has a client, server, and database sections. The client folder 
 4. Communicate with the server using `cURL`. I have supplied a simplified `cURL` cheatsheet that you can use to form your commands.
 
 # cURL Options Cheatsheet
-### Example: `curl http://localhost:3000/login -c cookie-file.txt -H 'Content-Type: application/json' -d '{"email":"test@test.com", "password":"password"}' -L`
+Example: `curl http://localhost:3000/login -c cookie-file.txt -H 'Content-Type: application/json' -d '{"email":"test@test.com", "password":"password"}' -L`
 Option | Description
 --- | ---
 `-c`, `-cookie-jar` \<filename\> | Specify to which file you want curl to write all cookies after a completed operation
